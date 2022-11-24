@@ -1,1 +1,12 @@
 <p>person works!</p>
+<input type="text" [(ngModel)]='name'>
+<button (click)="showText()"> Show text</button>
+<br>
+<p *ngIf="hayTexto; else sinTexto">
+    texto ingresado: {{name}}
+</p>
+<ng-template #sinTexto>
+    <p>
+        Nada que mostrar
+    </p>
+</ng-template>

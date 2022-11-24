@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
 
+  name = "";
+  hayTexto = false
   constructor() { }
+
+showText(){
+  console.log(this.name)
+  this.hayTexto =  this.name.length >= 1;
+}
 
   ngOnInit(): void {
   }
+
 
 }
