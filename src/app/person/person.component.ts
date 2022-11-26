@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonModel } from '../model/person.model';
 
 @Component({
   selector: 'app-person',
@@ -9,15 +10,17 @@ export class PersonComponent implements OnInit {
 
   name = "";
   hayTexto = false
-  constructor() { }
 
-showText(){
-  console.log(this.name)
-  this.hayTexto =  this.name.length >= 1;
-}
+  peopleList: PersonModel[] = [
+    new PersonModel("Pedro", "Mora", 20),
+    new PersonModel("Luis", "Perez", 24)
+  ]
+
+  showText() {
+    console.log(this.name)
+    this.hayTexto = this.name.length >= 1;
+  }
 
   ngOnInit(): void {
   }
-
-
 }
