@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonModel } from '../model/person.model';
+import { PersonModel } from '../../model/person.model';
 
 @Component({
   selector: 'app-person',
